@@ -17,11 +17,12 @@ defmodule BarSystemElixir.Bar do
   end
 
   def init(_) do
+    # fill_store
     :ets.new(:ingredients, [:named_table, :public])
-
     {:ok, res} = Repo.query("select name, quantity from ingredients")
     Enum.each(res.rows, fn [n, q] ->  :ets.insert(:ingredients, {n, q}) end)
 
+    # start_barmans
     children = [
       :poolboy.child_spec(:bar, poolboy_config())
     ]

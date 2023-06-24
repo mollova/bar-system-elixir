@@ -25,7 +25,3 @@ defmodule BarSystemElixir.Barman do
   end
 
 end
-
-
-# BarSystemElixir.Barman.start_link("cd")
-# BarSystemElixir.Barman.make_cocktail("magic")

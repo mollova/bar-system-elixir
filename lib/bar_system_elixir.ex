@@ -12,8 +12,6 @@ defmodule BarSystemElixir do
     DynamicSupervisor.init(strategy: :one_for_one)
   end
 
-  # split to start_bars and start_users to start the clients
-  # add registry for start_bars
   def start_bars_supervisor() do
     IO.puts("Starting bar emag")
     DynamicSupervisor.start_child(__MODULE__, {BarSystemElixir.Bar, []})
