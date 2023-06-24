@@ -1,8 +1,6 @@
 defmodule BarSystemElixir do
   use DynamicSupervisor
 
-  # @registry :bars_registry
-
   def start_link(_) do
     IO.puts("Starting bars")
     DynamicSupervisor.start_link(__MODULE__, [], name: __MODULE__)
