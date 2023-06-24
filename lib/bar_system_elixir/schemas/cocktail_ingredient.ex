@@ -6,6 +6,3 @@ defmodule BarSystemElixir.Schemas.CocktailIngredient do
     belongs_to(:ingredient, BarSystemElixir.Schemas.Ingredient)
   end
 end
-
-# {:ok, ingredient} = Repo.insert(%CocktailIngredient{name: "gin", quantity: 15})
-#
