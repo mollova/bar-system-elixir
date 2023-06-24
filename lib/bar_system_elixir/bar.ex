@@ -17,7 +17,7 @@ defmodule BarSystemElixir.Bar do
   end
 
   def init(_) do
-    ingredients = :ets.new(:ingredients, [:named_table, :public])
+    :ets.new(:ingredients, [:named_table, :public])
 
     {:ok, res} = Repo.query("select name, quantity from ingredients")
     Enum.each(res.rows, fn [n, q] ->  :ets.insert(:ingredients, {n, q}) end)

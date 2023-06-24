@@ -24,10 +24,6 @@ defmodule BarSystemElixir.Barman do
     {:reply, "ready", state}
   end
 
-  def make_cocktail(cocktail) do
-
-  end
-
 end
 
 

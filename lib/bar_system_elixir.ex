@@ -24,8 +24,4 @@ defmodule BarSystemElixir do
     DynamicSupervisor.start_child(__MODULE__, {BarSystemElixir.User, []})
   end
 
-  defp via_tuple(name) do
-    {:via, Registry, {@registry, name}}
-  end
-
 end
